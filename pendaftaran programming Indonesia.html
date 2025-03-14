@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Google Indonesia Programming Competition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4285f4, #34a853, #fbbc05, #ea4335);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .google-logo {
+            width: 150px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #202124;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #5f6368;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #dfe1e5;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #4285f4;
+            outline: none;
+        }
+
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+        }
+
+        button {
+            background-color: #4285f4;
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #357abd;
+            transform: translateY(-2px);
+        }
+
+        .required {
+            color: #ea4335;
+            margin-left: 3px;
+        }
+
+        @media (max-width: 600px) {
+            .team-members {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="google-logo">
+            <h1>Programming Competition 2024<span class="required"></span></h1>
+            <p>Indonesia Creative Coding Challenge</p>
+        </div>
+
+        <form>
+            <!-- Data Tim -->
+            <div class="form-group">
+                <label>Nama Tim <span class="required">*</span></label>
+                <input type="text" required placeholder="Masukkan nama tim">
+            </div>
+
+            <div class="form-group">
+                <label>Anggota Tim (Maksimal 3 orang) <span class="required">*</span></label>
+                <div class="team-members">
+                    <input type="text" placeholder="Nama Anggota 1" required>
+                    <input type="text" placeholder="Nama Anggota 2">
+                    <input type="text" placeholder="Nama Anggota 3">
+                </div>
+            </div>
+
+            <!-- Kontak -->
+            <div class="form-group">
+                <label>Email Ketua Tim <span class="required">*</span></label>
+                <input type="email" required placeholder="contoh@email.com">
+            </div>
+
+            <div class="form-group">
+                <label>Nomor Telepon <span class="required">*</span></label>
+                <input type="tel" required placeholder="081234567890">
+            </div>
+
+            <!-- Kategori Lomba -->
+            <div class="form-group">
+                <label>Kategori Lomba <span class="required">*</span></label>
+                <select required>
+                    <option value="">Pilih Kategori</option>
+                    <option>Web Development</option>
+                    <option>Mobile Development</option>
+                    <option>Artificial Intelligence</option>
+                    <option>Data Science</option>
+                    <option>Creative Coding</option>
+                </select>
+            </div>
+
+            <!-- Upload Proposal -->
+            <div class="form-group">
+                <label>Upload Proposal (PDF) <span class="required">*</span></label>
+                <input type="file" accept=".pdf" required>
+            </div>
+
+            <!-- Syarat dan Ketentuan -->
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">Saya menyetujui syarat dan ketentuan yang berlaku <span class="required">*</span></label>
+            </div>
+
+            <button type="submit">Daftar Sekarang</button>
+        </form>
+    </div>
+</body>
+</html>
